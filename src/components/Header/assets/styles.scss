@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import "../../../assets/variables.scss";
+
+.header {
+  display: flex;
+  padding: $spacing-lg calc($spacing-lg * 1.6);
+  gap: 50px;
+
+  .header-left {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    .header-menu-btn {
+      font-size: $f-24;
+    }
+
+    .header-logo {
+      font-family: "League Gothic", sans-serif;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      grid-template-columns: 35px 1fr;
+      user-select: none;
+
+      svg {
+        font-size: 36px;
+        color: $red;
+      }
+
+      span {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .header-search {
+    width: fit-content;
+    height: 36px;
+    width: 100%;
+    border: 2px solid $grey-two;
+    border-radius: 30px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    padding-left: $spacing-lg;
+
+    input {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      font-size: $f-18;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        font-size: $f-24;
+      }
+    }
+  }
+
+  .header-right {
+    display: grid;
+    align-items: center;
+
+    .header-user {
+      display: grid;
+      align-items: center;
+
+      img {
+        height: 36px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
