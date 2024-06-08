@@ -2,8 +2,10 @@
 @import "../../../assets/variables.scss";
 
 .header {
-  display: flex;
+  display: grid;
   padding: $spacing-lg calc($spacing-lg * 1.6);
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
   gap: 50px;
 
   .header-left {
@@ -41,12 +43,14 @@
     width: fit-content;
     height: 36px;
     width: 100%;
+    max-width: 550px;
     border: 2px solid $grey-two;
     border-radius: 30px;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 50px;
     padding-left: $spacing-lg;
+    justify-self: center;
 
     input {
       height: 100%;
@@ -78,6 +82,30 @@
   .header-right {
     display: grid;
     align-items: center;
+
+    .header-signin {
+      height: 38px;
+      border: 2px solid $grey-two;
+      border-radius: 36px;
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      text-decoration: none;
+      color: $blue;
+      padding: $spacing-sm $spacing-md;
+      box-sizing: border-box;
+
+      svg {
+        font-size: 28px;
+      }
+
+      span {
+        width: 50px;
+        height: fit-content;
+      }
+    }
 
     .header-user {
       display: grid;
